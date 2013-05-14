@@ -1,0 +1,4 @@
+Alias /rockmongo/page_disabled <%= ENV['OPENSHIFT_ROCKMONGO_DIR'] %>usr/html/page_disabled.html
+
+RewriteEngine on
+RewriteRule ^/rockmongo/setup(.*) /rockmongo/page_disabled [R=302,L]

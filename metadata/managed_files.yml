@@ -1,0 +1,6 @@
+---
+locked_files:
+- bin/
+- env/
+- etc/
+- metadata/

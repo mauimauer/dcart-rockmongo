@@ -1,0 +1,25 @@
+#!/bin/bash -eu
+source $OPENSHIFT_CARTRIDGE_SDK_BASH
+
+# RockMongo cartridge. Source included in cartridge
+# RockMongo setup script
+
+if [ ${OPENSHIFT_MONGODB_DB_HOST:-'Not Installed'} == 'Not Installed' ]
+then
+  client_error ""
+  client_error "MongoDB must be added before rockmongo."
+  client_error ""
+  exit 137
+fi
+
+client_result ""
+client_result "rockmongo-1.1 added.  Please make note of these MongoDB credentials again:"
+client_result ""
+client_result "   RockMongo User    : $OPENSHIFT_MONGODB_DB_USERNAME"
+client_result "   RockMongo Password: $OPENSHIFT_MONGODB_DB_PASSWORD"
+client_result ""
+client_result "URL: https://$OPENSHIFT_GEAR_DNS/rockmongo/"
+
+cart_props "connection_url=https://$OPENSHIFT_GEAR_DNS/rockmongo/"
+
+set_app_info "URL: https://$OPENSHIFT_GEAR_DNS/rockmongo/"
