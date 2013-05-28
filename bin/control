@@ -5,6 +5,7 @@ HTTPD_CFG_FILE=${OPENSHIFT_ROCKMONGO_DIR}etc/conf/httpd_nolog.conf
 HTTPD_PID_FILE=${OPENSHIFT_ROCKMONGO_DIR}run/httpd.pid
 
 function start() {
+  update_httpd_passenv $HTTPD_CFG_FILE
   /usr/sbin/httpd -C "Include ${OPENSHIFT_ROCKMONGO_DIR}etc/conf.d/*.conf" -f $HTTPD_CFG_FILE -k start
 }
 
@@ -22,6 +23,7 @@ function stop() {
 }
 
 function restart() {
+  update_httpd_passenv $HTTPD_CFG_FILE
   /usr/sbin/httpd -C "Include ${OPENSHIFT_ROCKMONGO_DIR}etc/conf.d/*.conf" -f $HTTPD_CFG_FILE -k restart
 }
 
@@ -32,11 +34,9 @@ function status() {
     if ps --no-headers --pid $(< $HTTPD_PID_FILE) > /dev/null
     then
       client_result 'Rockmongo is running'
-      exit 0
     fi
   fi
   client_result 'Rockmongo is either stopped or inaccessible'
-  exit 1
 }
 
 # Clean up any log files

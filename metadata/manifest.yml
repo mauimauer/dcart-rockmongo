@@ -1,8 +1,8 @@
-Name: jhourock
+Name: rockmongo
 Display-Name: RockMongo 1.1
 Cartridge-Short-Name: ROCKMONGO
 Cartridge-Version: 0.0.1
-Cartridge-Vendor: jhourock
+Cartridge-Vendor: rockmongo
 Description: "Web based MongoDB administration tool. Requires the MongoDB cartridge to be installed first."
 Version: '1.1'
 License: ASL 2.0
@@ -34,5 +34,4 @@ Endpoints:
     Mappings:
       - Frontend:      "/rockmongo"
         Backend:       "/rockmongo"
-Install-Build-Required: false
-Source-Url: http://github.com/jhou1/v2rockmongo.git
+Source-Url: http://github.com/jhou1/v2rockmongo.git 
