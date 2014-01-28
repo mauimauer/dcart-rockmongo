@@ -34,4 +34,4 @@ Endpoints:
     Mappings:
       - Frontend:      "/rockmongo"
         Backend:       "/rockmongo"
-Source-Url: http://github.com/jhou1/v2rockmongo.git 
+Source-Url: https://github.com/jhou1/dcart-rockmongo.git
