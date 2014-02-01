@@ -1,7 +1,7 @@
 Name: rockmongo
 Display-Name: RockMongo 1.1
 Cartridge-Short-Name: ROCKMONGO
-Cartridge-Version: 0.0.5
+Cartridge-Version: 0.0.7
 Cartridge-Vendor: rockmongo
 Description: "Web based MongoDB administration tool. Requires the MongoDB cartridge to be installed first."
 Version: '1.1'
@@ -21,7 +21,7 @@ Cart-Data:
 Publishes:
 Subscribes:
 Configure-Order:
-  - mongodb
+  - mongodb-2.2
   - rockmongo
 Scaling:
   Min: 1
