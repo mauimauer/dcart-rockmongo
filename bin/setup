@@ -1,16 +1,11 @@
-#!/bin/bash -eu
+#!/bin/bash -e
+
+set -u
+
 source $OPENSHIFT_CARTRIDGE_SDK_BASH
 
 # RockMongo cartridge. Source included in cartridge
 # RockMongo setup script
-
-if [ ${OPENSHIFT_MONGODB_DB_HOST:-'Not Installed'} == 'Not Installed' ]
-then
-  client_error ""
-  client_error "MongoDB must be added before rockmongo."
-  client_error ""
-  exit 137
-fi
 
 client_result ""
 client_result "rockmongo-1.1 added.  Please make note of these MongoDB credentials again:"
