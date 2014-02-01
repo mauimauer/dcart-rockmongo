@@ -26,6 +26,9 @@ Subscribes:
 Configure-Order:
   - mongodb
   - rockmongo
+Scaling:
+  Min: 1
+  Max: 1
 Endpoints:
   - Private-IP-Name:   IP
     Private-Port-Name: PORT
@@ -34,4 +37,4 @@ Endpoints:
     Mappings:
       - Frontend:      "/rockmongo"
         Backend:       "/rockmongo"
-Source-Url: https://github.com/jhou1/dcart-rockmongo.git
+Source-Url: https://github.com/mauimauer/dcart-rockmongo.git
