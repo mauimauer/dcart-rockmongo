@@ -1,16 +1,15 @@
 Name: rockmongo
 Display-Name: RockMongo 1.1
 Cartridge-Short-Name: ROCKMONGO
-Cartridge-Version: 0.0.1
+Cartridge-Version: 0.0.5
 Cartridge-Vendor: rockmongo
 Description: "Web based MongoDB administration tool. Requires the MongoDB cartridge to be installed first."
 Version: '1.1'
 License: ASL 2.0
 Vendor: code.google.com/p/rock-php/wiki/rock_mongo
 Website: http://rockmongo.com/
-Help-Topics:
-  "Developer Center": https://openshift.redhat.com/community/developers
 Categories:
+  - service
   - embedded
 Provides:
   - rockmongo-1.1
@@ -19,8 +18,6 @@ Cart-Data:
   - Key: connection_url
     Type: cart_data
     Description: "RockMongo connection URL"
-Reservations:
-  - MEM >= 100MB
 Publishes:
 Subscribes:
 Configure-Order:
@@ -37,4 +34,3 @@ Endpoints:
     Mappings:
       - Frontend:      "/rockmongo"
         Backend:       "/rockmongo"
-Source-Url: https://github.com/mauimauer/dcart-rockmongo.git
